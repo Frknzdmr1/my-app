@@ -1,25 +1,83 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
 
-function App() {
+console.log(React, "<<<<")
+function MyApp() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 }
 
-export default App;
+function Header() {
+  return (
+    <div>Header</div>
+  )
+}
+
+function Body() {
+  return (
+    <div>
+      Body Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quas quo laboriosam id praesentium. Reiciendis at iusto autem quo quam repudiandae facere dolorum tenetur commodi nam? Voluptate, tempora excepturi! Dolor!
+      <Image />
+      <Title />
+      <MainInfo />
+    </div>
+  )
+}
+function Footer() {
+  return (
+    <div>
+      <ul>
+        <li>facebook</li>
+        <li>facebook</li>
+        <li>facebook</li>
+      </ul>
+      <Address />
+    </div>
+  )
+}
+
+
+class Image extends React.Component {
+  render() {
+    return (
+      <div>
+        <img src="https://miro.medium.com/max/1400/0*3C6CUn1FEC_raM8c" alt="" width="200" />
+      </div >
+    )
+  }
+}
+
+class Title extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>Welcome to our first react class</h2>
+      </div >
+    )
+  }
+}
+
+class MainInfo extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>React is fast js library</h2>
+      </div >
+    )
+  }
+}
+function Address() {
+  return (
+    <div>
+      <p>123123 Lake drive, Pa, 170050</p>
+    </div>
+  )
+}
+
+
+
+export default MyApp;
